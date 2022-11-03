@@ -1,0 +1,10 @@
+rules:
+  title-api-suffix:
+    description: The title of an API MUST end with the suffix " API".
+    severity: error
+    given: $.info.title
+    message: The title "{{value}}" does not end with the suffix " API".
+    then:
+      function: pattern
+      functionOptions:
+        match: "\ API$"

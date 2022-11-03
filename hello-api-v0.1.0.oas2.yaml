@@ -1,0 +1,26 @@
+swagger: '2.0'
+info:
+  title: Hello API
+  description: This is the documentation of the super awesome Hello API
+  contact:
+    name: Patrice Krakow
+    email: patrice.krakow@gmail.com
+  version: 0.1.0
+basePath: /
+paths:
+  '/hello':
+    get:
+      summary: Get `hello`
+      description: This API endpoint allows you to get the `hello`
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Message'
+
+definitions:
+  Message:
+    type: object
+    properties:
+      message:
+        type: string
